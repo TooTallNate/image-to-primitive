@@ -1,0 +1,18 @@
+{
+  "name": "image-to-primitive",
+  "alias": ["image-to-primitive.now.sh"],
+  "version": 2,
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@now/static-build"
+    },
+    {
+      "src": "primitive.go",
+      "use": "@now/go",
+      "config": {
+        "maxLambdaSize": "20mb"
+      }
+    }
+  ]
+}
